@@ -10,8 +10,8 @@ var express = require("express"),
     publicDir = process.argv[2] || __dirname + '/public',
     path = require('path');
 
-app.get("/test.key", function (req, res) {
-  res.sendFile(path.join(publicDir, "/test.key"));
+app.get("/key.pem", function (req, res) {
+  res.sendFile(path.join(publicDir, "/key.pem"));
 });
 
 app.use(methodOverride());
