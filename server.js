@@ -13,6 +13,9 @@ var express = require("express"),
 app.get("/key.pem", function (req, res) {
   res.sendFile(path.join(publicDir, "/key.pem"));
 });
+app.get("/", function (req, res) {
+  res.sendFile(path.join(publicDir, "/index.html"));
+});
 
 app.use(methodOverride());
 app.use(bodyParser.json());
