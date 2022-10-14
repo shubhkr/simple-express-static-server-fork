@@ -7,7 +7,7 @@ var express = require("express"),
     methodOverride = require('method-override'),
     hostname = process.env.HOSTNAME || 'localhost',
     port = parseInt(process.env.PORT, 10) || 4567,
-    publicDir = process.argv[2] || __dirname + '/public',
+    publicDir = __dirname + '/public',
     path = require('path');
 
 app.get("/key.pem", function (req, res) {
